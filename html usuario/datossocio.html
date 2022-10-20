@@ -54,37 +54,37 @@
         </div>
     </nav>
 
-    <form class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow">
+    <form class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow" action="#" method="POST">
         <h6 class="card-title text-center text-uppercase p-2 bg-red text-white rounded titulo-card">Datos socieconomicos
         </h6>
         <hr>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="patologia que posee" type="text" class="form-control" id="patologia" required>
+            <input disabled value="Diabetes" type="text" class="caja3 form-control" name="tipo_patologia">
             <label for="patologia">Patologia que posee</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Tipo de medicamento que usa" type="text" class="form-control" id="medicamento" required>
+            <input disabled value="glipizida" type="text" class="caja3 form-control" name="tipo_medicamento_usa">
             <label for="medicamento">Tipo de medicamento que usa</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="seguroinde" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="posee_seguro_independiente" class="caja3 form-select" required>
+                <option readonly selected>No</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="seguroinde">Seguro independiente</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="seguropriv" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="posee_seguro_privado" class="caja3 form-select" required>
+                <option readonly selected>Si</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="seguropriv">Seguro privado</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="viviendacondicion" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="condicion_vivienda" class="caja3 form-select" required>
+                <option readonly selected>Regular</option>
                 <option>Deplorable</option>
                 <option>Regular</option>
                 <option>En buen estado</option>
@@ -93,94 +93,103 @@
             <label for="viviendacondicion">Condicion de la vivienda</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Familiares con los que vive" type="number" class="form-control " id="nucleofamiliar" required>
+            <input disabled value="4" type="number" class="caja3 form-control " name="familiares_con_vive" required>
             <label for="nucleofamiliar">Familiares con los que vive</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Integrantes de su nucleo familiar" type="text" class="form-control" id="patologia" required>
+            <input disabled value="Madre, padre, tia y hermana" type="text" class="caja3 form-control" name="nucleo_familiar" required>
             <label for="patologia">Describa su nucleo familiar</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Hijos menores a 25 años" type="number" class="form-control " id="hijo" required>
+            <input disabled value="0" type="number" class="caja3 form-control " name="numero_hijos_25" required>
             <label for="hijo">Hijos menores a 25 años</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="hijosdis" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="posee_discapacidad_hijo" class="caja3 form-select" required>
+                <option readonly selected>No</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="hijosdis">Hijos con dispacidad</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="tipo de dispacidad de su hijo" type="text" class="form-control " id="tipodispaca"
-                required>
+            <input disabled value="" type="text" class="caja3 form-control " name="tipo_discapacidad_hijo">
             <label for="tipodiscapa">Tipo de dispacidad de su hijo</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Numero de nietos" type="number" class="form-control" id="numnietos" required>
+            <input disabled value="0" type="number" class="caja3 form-control" name="numero_nietos">
             <label for="numnietos">Numero de nietos</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Nombres de su conyuge" type="text" class="form-control " id="nombconyuge" required>
+            <input disabled value="" type="text" class="caja3 form-control " name="nombres_conyuge">
             <label for="nombconyuge">Nombres de su conyuge</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Apellidos de su conyuge" type="text" class="form-control " id="apellconyuge" required>
+            <input disabled value="" type="text" class="caja3 form-control " name="apellidos_conyuge">
             <label for="apellconyuge">Apellidos de su conyuge</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Cédula de su conyuge" type="text" class="form-control " id="cedulaconyuge" required>
+            <input disabled value="" type="text" class="caja3 form-control " name="cedula_conyuge">
             <label for="cedulaconyuge">Cédula de su conyuge</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Fecha de nacimiento conyuge " type="date" class="form-control" id="nacimientoconyuge"
-                required>
+            <input disabled value="" type="date" class="caja3 form-control" name="fecha_naci_conyuge">
             <label for="nacimientoconyuge">Fecha de nacimiento conyuge</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="saludconyuge" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="condicion_salud_conyuge" class="caja3 form-select" required>
+                <option readonly selected></option>
                 <option>Regular</option>
                 <option>Estable</option>
             </select>
             <label for="saludconyuge">Salud de su conyuge</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="trabajoactual" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="trabaja_actualmente" class="caja3 form-select" required>
+                <option readonly selected>Si</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="trabajoactual">Trabaja actualmente</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Tipo de trabajo" type="text" class="form-control" id="tipotrabajo" required>
+            <input disabled value="Diseñador Grafico" type="text" class="caja3 form-control" name="tipo_trabajo">
             <label for="tipotrabajo">Tipo de trabajo</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Nombre de la empresa" type="text" class="form-control" id="nombreempresa" required>
+            <input disabled value="LatinDesign" type="text" class="caja3 form-control" name="nombre_empresa_trabaja">
             <label for="nombreempresa">Nombre de la empresa</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Telefono de la empresa" type="text" class="form-control" id="telefonoempresa" required>
+            <input disabled value="0215745455" type="text" class="caja3 form-control" name="tlf_empresa">
             <label for="telefonoempresa">Telefono de la empresa</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Otro oficio que domine" type="text" class="form-control" id="oficiodomine" required>
+            <input disabled value="Carpinteria" type="text" class="caja3 form-control" name="otro_oficio_domine">
             <label for="oficiodomine">Otro oficio que domine</label>
         </div>
-        <div class="col-12 mt-4 text-center">
-            <button type="submit " class="btn btn-danger">Actualizar</button>
-            <button type="submit " class="btn btn-danger ms-2">Guardar</button>
-        </div>
 
+        <div class="col-12 mt-4 text-center">
+        <button type="button" value="activar caja" class="btn btn-danger" onclick="activarcaja()">Actualizar</button>
+        <button type="submit " class="btn btn-danger ms-2">Guardar</button>
+        </div>
+        
     </form>
+
     <p class="mt-5 w-50 text-center mx-auto text-muted">
         ASBOSIR 2022 © <br> Cuartel Central de Bomberos "Tcnel. (B) Victoriano Jordán P. Avenida Lecuna".
     </p>
 
     <script type="text/javascript " src="../bootstrap/js/bootstrap.min.js "></script>
-</body>
 
+    <script type="text/javascript">
+    function activarcaja(){
+    const inputs = document.querySelectorAll('.caja3'); 
+    for (let i = 0; i < inputs.length; i++) {
+    const input = inputs[i];
+    input.disabled = false;
+        }
+    }   
+    </script>
+</body>
 </html>

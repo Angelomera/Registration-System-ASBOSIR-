@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar clave</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <link rel="icon" href="img/logo_asbosir.png" type="image/x-icon" />
+</head>
+<body>
+    <header class="shadow p-3 mb-4 d-none d-sm-block">
+        SISTEMA DE REGISTRO DE LA &nbsp;ASOCIACIÓN DE BOMBEROS EN SITUACIÓN DE RETIRO (ASBOSIR)
+    </header>
+
+    <form action="http://localhost/PAGINA-ASBOSIR/html usuario/recuperacionclave.php" method="post" class="card-body bg-light mx-auto w-100 rounded shadow form2">
+        <h6 class="card-title text-uppercase p-2 bs-red bg-red text-white text-center mx-auto rounded titulo-card">
+            Cambio de contraseña
+        </h6>
+        <hr>
+        
+        <div class="mx-auto w-100 form-floating mb-4">
+            <input placeholder="Cédula" type="text" name="cedula" class="form-control" id="cedula" maxlength="8" required>
+            <label for="cedula">Cédula</label>
+        </div>
+        <div class="mx-auto w-100 form-floating mt-4">
+            <input placeholder="password" type="password" name="contraseña" class="form-control" id="password" required>
+            <label for="password">Contraseña nueva</label>
+        </div>
+        <div class="mx-auto w-100 form-floating mt-4">
+            <input placeholder="password" type="password" name="contraseña1" class="form-control" id="password" required>
+            <label for="password">Ingrese nuevamente su contraseña</label>
+        </div>
+        <div class="mx-auto w-100 form-floating mt-4">
+            <input readonly placeholder="Codigo de seguridad" type="text" name="random1" value="7das5d7sa" class="form-control" id="codigoseguridad1" required>
+            <label for="codigoseguridad1">Codigo de seguridad</label>
+        </div>
+        <div class="mx-auto w-100 form-floating mt-4">
+            <input placeholder="Ingrese el codigo de seguridad" type="text" name="random" class="form-control" id="codigoseguridad" required>
+            <label for="codigoseguridad">Ingrese el codigo de seguridad</label>
+        </div>
+        <div class="mt-3 text-center w-100 mx-auto">
+            <a class="btn btn-danger" href="index.html">Regresar</a>
+            <button type="submit" class="btn btn-danger me-2 ms-2">Continuar</button>
+        </div>
+        </form>
+        <script type="text/javascript " src="bootstrap/js/bootstrap.min.js "></script>
+        <p class="mt-5 w-50 text-center mx-auto text-muted">
+            ASBOSIR 2022 © <br> Cuartel Central de Bomberos "Tcnel. (B) Victoriano Jordán P. Avenida Lecuna".
+        </p>
+        <script type="text/javascript " src="bootstrap/js/bootstrap.min.js "></script>
+</body>
+</html>

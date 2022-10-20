@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-red">
         <div class="container-fluid">
             <a class="navbar-brand mx-3 fs-5 texto-animacion" href="menuadmin.html">Menu</a>
             <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse"
@@ -50,15 +50,14 @@
         </div>
     </nav>
 
-    <div class="tabla-revisarafilia table-responsive mt-5 w-100 mx-auto card-body bg-light rounded shadow">
+     <div class="tabla-revisarafilia table-responsive mt-5 w-100 mx-auto card-body bg-light rounded shadow">
         <h6 class="card-title text-center text-uppercase p-2 bg-red text-white rounded titulo-card">
-            DATOS SOBRE LA&nbsp;AFILIACIÓN
+            DATOS SOBRE LA&nbsp; AFILIACIÓN
         </h6>
         <hr>
         <table class="table table-hover">
-            <thead>
+        	<thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Nombres</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Cedula</th>
@@ -71,38 +70,34 @@
                     <th scope="col">Se encuentra afiliado</th>
                     <th scope="col">Estado de afiliación</th>
                     <th scope="col">Editar</th>
-                    <th scope="col">Eliminar</th>
+                    <th scope="col">Descargar</th>
                 </tr>
             </thead>
-            <tbody>
+			<tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Alfredo Jose</td>
-                    <td>Herrera Lopez</td>
-                    <td>28337981</td>
-                    <td>92602</td>
-                    <td>01/04/2014</td>
-                    <td>05/07/2018</td>
-                    <td>Si</td>
-                    <td>No</td>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>Por revisar</td>
-                    <td><a href="modificarrevision.html"><img src="../img/pen-fill.svg" alt="Editar" title="Editar"
-                                width="25" height="35"></a></td>
-                    <td><a class="mx-auto" href="relacionado a php"><img src="../img/person-x-fill.svg" alt="Editar"
-                                title="Eliminar" width="28" height="35"></a></td>
+                    <td scope="col">Matias Abraham</td>
+                    <td scope="col">Mera Vasquez</td>
+                    <td scope="col">29365492</td>
+                    <td scope="col">045454</td>
+                    <td scope="col">05/09/2012</td>
+                    <td scope="col">07/05/2014</td>
+                    <td scope="col">Si</td>
+                    <td scope="col">Si</td>
+                    <td scope="col">Si</td>
+                    <td scope="col">Si</td>
+                    <td scope="col">Se encuentra afiliado</td>
+                    <td><a href="modificarrevision.html" Class="mes"><img src="../img/pen-fill.svg" alt="Editar" title="Editar" width="25" height="35"></a></td>
+                    <td><a href="../fpdf/pdf1.php?id=<?php echo $fila['cedula'];?>"><img src="../img/file-earmark-pdf-fill.svg" alt="Descargar" title="Descargar" width="28" height="35"></a></td>  
                 </tr>
             </tbody>
-        </table>
-    </div>
+		</table>
+	</div>
 
-    <p class="mt-5 w-50 text-center mx-auto text-muted">
+	<p class="mt-5 w-50 text-center mx-auto text-muted">
         ASBOSIR 2022 © <br> Cuartel Central de Bomberos "Tcnel. (B) Victoriano Jordán P. Avenida Lecuna".
     </p>
 
     <script type="text/javascript " src="../bootstrap/js/bootstrap.min.js "></script>
-
+	
 </body>
-
 </html>

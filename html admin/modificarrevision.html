@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-red">
         <div class="container-fluid">
             <a class="navbar-brand mx-3 fs-5 texto-animacion" href="menuadmin.html">Menu</a>
             <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse"
@@ -50,74 +50,86 @@
         </div>
     </nav>
 
-    <form class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow">
-        <h6 class="card-title text-center text-uppercase p-2 bg-red text-white rounded titulo-card3">
+	<form action="actualizarr.php" class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow" method="POST">
+		<h6 class="card-title text-center text-uppercase p-2 bg-red text-white rounded titulo-card3">
             MODIFICACIÓN DE DATOS
         </h6>
         <hr>
-        <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Numero de nomina" type="text" class="form-control" id="nomina" required>
-            <label for="nomina">Numero de nomina</label>
+        
+		<div class="col-md-4 mt-4 form-floating">
+            <input disabled type="text" value="045454" name="numero_nomina" class="caja5 form-control" id="nomina">
+            <label for="nomina">Número de Nómina</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Fecha de egreso" type="date" class="form-control" id="egreso" required>
+            <input disabled  type="date" value="05/09/2012" name="fecha_egreso" class="caja5 form-control" id="egreso">
             <label for="egreso">Fecha de egreso</label>
         </div>
-        <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Fecha de ingreso" type="date" class="form-control" id="ingreso" required>
+         <div class="col-md-4 mt-4 form-floating">
+            <input disabled  type="date" value="07/05/2014" name="fecha_ingreso" class="caja5 form-control" id="ingreso">
             <label for="ingreso">Fecha de ingreso</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="cajaahorro" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled  id="cajaahorro" name="caja_ahorro" class="caja5 form-select">
+                <option readonly selected>Si</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="cajaahorro">Caja de ahorro</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="funerario" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled  id="funerario"  name="servicio_funerario" class="caja5 form-select">
+                <option readonly selected>Si</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="funerario">Servicio funerario</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="economico" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled  id="economico"  name="apoyo_economico" class="caja5 form-select">
+                <option readonly selected>Si</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="economico">Apoyo economico</label>
         </div>
-        <div class="col-md-4 mt-4 form-floating">
-            <select id="encuentraafiliado" class="form-select" required>
-                <option disabled selected></option>
+        <div class="col-md-6 mt-4 form-floating">
+            <select disabled  id="encuentraafiliado"  name="estado_afiliacion_asbosir" class="caja5 form-select">
+                <option readonly selected>Si</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="encuentraafiliado">¿Se encuentra afiliado?</label>
         </div>
-        <div class="col-md-4 mt-4 form-floating">
-            <select id="estadoafiliado" class="form-select" required>
-                <option selected>Por revisar</option>
+        <div class="col-md-6 mt-4 form-floating">
+            <select disabled  id="estadoafiliado"  name="estado_de_afiliacion" class="caja5 form-select">
+                <option readonly selected>Se encuentra afiliado</option>
+                <option>Por revisar</option>
                 <option>No se encuentra afiliado</option>
                 <option>Se encuentra afiliado</option>
             </select>
             <label for="estadoafiliado">Estado de afiliación</label>
         </div>
-        <div class="col-12 mt-4 text-center">
-            <button type="submit " class="btn btn-danger me-2 ms-2">Guardar</button>
-            <a class="btn btn-danger" href="revisionafiliacion.html">Regresar</a>
+         <div class="col-12 mt-4 text-center">
+         <button type="button" value="activar caja" class="btn btn-danger" onclick="activarcaja()">Actualizar</button>
+         <button type="submit" class="btn btn-danger ms-2" name="actualizar">Guardar</button>
         </div>
     </form>
-    <p class="mt-5 w-50 text-center mx-auto text-muted">
+
+	 <p class="mt-5 w-50 text-center mx-auto text-muted">
         ASBOSIR 2022 © <br> Cuartel Central de Bomberos "Tcnel. (B) Victoriano Jordán P. Avenida Lecuna".
     </p>
 
     <script type="text/javascript " src="../bootstrap/js/bootstrap.min.js"></script>
 
-</body>
+    <script type="text/javascript">
+    function activarcaja(){
+    const inputs = document.querySelectorAll('.caja5'); 
+    for (let i = 0; i < inputs.length; i++) {
+    const input = inputs[i];
+    input.disabled = false;
+        }
+    }   
+    </script>
 
+</body>
 </html>

@@ -3,11 +3,20 @@ form {
 }
 
 .titulo-card{
-    width: 170px;
+    width: 230px;
 }
 
 .bg-red {
     background-color: #155db1;
     text-shadow: 1px 2px 2px black;
+}
+
+.form2 {
+max-width: 350px;
+margin-top: 120px;
+}
+
+.link-clave{
+text-decoration: none;
 }
 

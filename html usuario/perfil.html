@@ -53,34 +53,33 @@
             </div>
         </div>
     </nav>
-
-    <form class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow">
+    <form class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow" method="post" action="#">
         <h6 class="card-title text-center text-uppercase p-2 bg-red text-white rounded titulo-card">Información personal
         </h6>
         <hr>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Nombres" type="text" class="form-control" id="Nombres" required>
+            <input disabled="" value="Matias Abraham" type="text" class="caja2 form-control" name="nombres" required>
             <label for="Nombres">Nombres</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Apellidos" type="text" class="form-control" id="Apellidos" required>
+            <input disabled="" value="Mera Vasquez" type="text" class="caja2 form-control" name="apellidos" required>
             <label for="Apellidos">Apellidos</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Cédula" type="text" class="form-control" id="Cédula" maxlength="8" required>
+            <input disabled="" value="29365492" type="text" class="caja2 form-control" name="cedula" maxlength="8" required>
             <label for="Cédula">Cédula</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Correo electronico" type="email" class="form-control" id="correo" required>
+            <input disabled="" value="matias@gmail.com" type="email" class="caja2 form-control" name="email" required>
             <label for="correo">Correo electronico</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="fecha de nacimiento" type="date" class="form-control " id="nacimiento" required>
+            <input disabled="" value="1985/05/09" type="date" class="caja2 form-control " name="fecha_nacimiento" required>
             <label for="nacimiento">fecha de nacimiento</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="rango" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled="" name="rango"  value= "" class="caja2 form-select" required>
+                <option readonly selected>General</option>
                 <option>Raso</option>
                 <option>Distinguido</option>
                 <option>Cabo segundo</option>
@@ -99,8 +98,8 @@
             <label for="rango">Rango</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="estadocivil" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="estado_civil" class="caja2 form-select" required>
+                <option readonly selected>Soltero</option>
                 <option>Soltero</option>
                 <option>Casado</option>
                 <option>Divorciado</option>
@@ -110,8 +109,8 @@
             <label for="estadocivil">Estado civil</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="sex" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="sexo" class="caja2 form-select" required>
+                <option readonly selected>Masculino</option>
                 <option>Masculino</option>
                 <option>Femenino</option>
                 <option>Otro</option>
@@ -119,8 +118,8 @@
             <label for="sex">Sexo</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="gradoinstru" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="grado_instruccion" class="caja2 form-select" required>
+                <option readonly selected>Universitario</option>
                 <option>Primaria</option>
                 <option>Bachillerato</option>
                 <option>Tecnico superior universitario</option>
@@ -133,18 +132,18 @@
             <label for="gradoinstru">Grado de instrucción</label>
         </div>
         <div class="col-12 mt-4 text-center">
-            <button type="submit " class="btn btn-danger">Actualizar</button>
-            <button type="submit " class="btn btn-danger ms-2">Guardar</button>
+        <button type="button" value="activar caja" class="btn btn-danger" onclick="activarcaja2()">Actualizar</button>
+            <button type="submit " class="btn btn-danger ms-2" value="actualizar" name="actualizar">Guardar</button>
         </div>
-    </form>
 
-    <form class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow">
+    </form>
+    <form  class="row g-3 mt-5 w-100 mx-auto card-body bg-light rounded shadow" action="actualizar2.php" method="POST">
         <h6 class="card-title text-center text-uppercase p-2 bs-red bg-red text-white rounded titulo-card2">Datos de
             ubicación</h6>
         <hr>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="estado" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled name="estado" class="caja1 form-select" required>
+                <option readonly selected>Distrito capital</option>
                 <option>Distrito capital</option>
                 <option>Miranda</option>
                 <option>Vargas</option>
@@ -173,52 +172,75 @@
             <label for="estado">Estado</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="municipio" type="text" class="form-control" id="municipio" required>
+            <input disabled="" value="Libertador" type="text" class="caja1 form-control" name="municipio" required>
             <label for="municipio">Municipio</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="parroquia" type="text" class="form-control" id="parroquia" required>
+            <input disabled="" value="Sucre" type="text" class="caja1 form-control" name="parroquia" required>
             <label for="parroquia">Parroquia</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="dirección donde vive" type="text" class="form-control" id="direccion" required>
+            <input disabled="" value="Avenida Sucre" type="text" class="caja1 form-control" name="direccion_vive" required>
             <label for="direccion">Dirección donde vive</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Teléfono movil" type="text" class="form-control " id="movil" required>
+            <input disabled="" value="0414645888" type="text" class="caja1 form-control " name="tlf_movil" required>
             <label for="movil">Teléfono movil</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <input placeholder="Teléfono local" type="text" class="form-control " id="local" required>
+            <input disabled="" value="0212567484" type="text" class="caja1 form-control " name="tlf_local">
             <label for="local">Teléfono local</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="viviendapropia" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled="" name="posee_vivienda_propia" class="caja1 form-select" required>
+                <option readonly selected>Si</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="viviendapropia">Vivienda propia</label>
         </div>
         <div class="col-md-4 mt-4 form-floating">
-            <select id="viviendaalquilada" class="form-select" required>
-                <option disabled selected></option>
+            <select disabled="" name="posee_vivienda_alquilada" class="caja1 form-select" required>
+                <option readonly selected>No</option>
                 <option>Si</option>
                 <option>No</option>
             </select>
             <label for="viviendaalquilada">Vivienda alquilada</label>
         </div>
+        <div class="col-md-4 mt-4 form-floating">
+            <input hidden value="<?php echo $row['ubicacion_id']; ?>" type="text" class="form-control" name="ubicacion_id" required readonly>
+            <label hidden for="id">ID</label>
+        </div>
         <div class="col-12 mt-4 text-center">
-            <button type="submit " class="btn btn-danger">Actualizar</button>
-            <button type="submit " class="btn btn-danger ms-2">Guardar</button>
+            <button type="button" value="activar caja" class="btn btn-danger" onclick="activarcaja()">Actualizar</button>
+            <button type="submit" class="btn btn-danger ms-2" name="actualizar">Guardar</button>
         </div>
     </form>
-
     <p class="mt-5 w-50 text-center mx-auto text-muted">
         ASBOSIR 2022 © <br> Cuartel Central de Bomberos "Tcnel. (B) Victoriano Jordán P. Avenida Lecuna".
     </p>
 
     <script type="text/javascript " src="../bootstrap/js/bootstrap.min.js "></script>
-</body>
 
+    <script type="text/javascript">
+    function activarcaja(){
+    const inputs = document.querySelectorAll('.caja1'); 
+    for (let i = 0; i < inputs.length; i++) {
+    const input = inputs[i];
+    input.disabled = false;
+        }
+    }   
+    </script>
+
+    <script type="text/javascript">
+    function activarcaja2(){
+    const inputs = document.querySelectorAll('.caja2'); 
+    for (let i = 0; i < inputs.length; i++) {
+    const input = inputs[i];
+    input.disabled = false;
+        }
+    }   
+    </script>
+    
+</body>
 </html>
